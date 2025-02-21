@@ -43,7 +43,7 @@ Antes de rodar o projeto, verifique se você possui as seguintes ferramentas ins
 1. **Clone o repositório** para o seu computador:
 
    ```bash
-   git clone https://github.com/seu-usuario/gerenciador-de-clientes.git
+   git clone git@github.com:aliek57/GerenciadorClientes.git
 
 2. **Abra o projeto no Android Studio:**
 
