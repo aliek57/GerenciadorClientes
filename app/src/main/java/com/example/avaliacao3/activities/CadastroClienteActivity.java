@@ -22,6 +22,8 @@ import com.example.avaliacao3.interfaces.OnIbgeReceivedListener;
 import com.example.avaliacao3.interfaces.ViaCepService;
 import com.example.avaliacao3.models.ClienteViewModel;
 
+import java.util.regex.Pattern;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -31,6 +33,10 @@ public class CadastroClienteActivity extends AppCompatActivity {
     private EditText edtCnpj, edtrazaoSocial, edtNome, edtContato, edtTelefone,
             edtEmail, edtCep, edtLog, edtBairro, edtNum;
     private ClienteViewModel clienteViewModel;
+
+    private static final Pattern EMAIL_PATTERN = Pattern.compile("^[A-Za-z0-9+_.-]+@(.+)$");
+    private static final Pattern NUMERIC_PATTERN = Pattern.compile("^\\d+$");
+    private static final Pattern PHONE_PATTERN = Pattern.compile("^\\d{10,11}$");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +63,7 @@ public class CadastroClienteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String cep = edtCep.getText().toString();
-                if (cep.isEmpty()) {
+                if (cep.isEmpty() || !NUMERIC_PATTERN.matcher(cep).matches()) {
                     Toast.makeText(CadastroClienteActivity.this, "CEP inválido", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -76,6 +82,28 @@ public class CadastroClienteActivity extends AppCompatActivity {
             String logradouro = edtLog.getText().toString().trim();
             String bairro = edtBairro.getText().toString().trim();
             String numero = edtNum.getText().toString().trim();
+
+            if (cnpj.isEmpty() || razaoSocial.isEmpty() || nomeFantasia.isEmpty() ||
+                    contato.isEmpty() || telefone.isEmpty() || email.isEmpty() ||
+                    cep.isEmpty() || numero.isEmpty()) {
+                Toast.makeText(this, "Todos os campos são obrigatórios!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if (!EMAIL_PATTERN.matcher(email).matches()) {
+                Toast.makeText(this, "E-mail inválido!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if (!PHONE_PATTERN.matcher(telefone).matches()) {
+                Toast.makeText(this, "Telefone inválido!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            if (!NUMERIC_PATTERN.matcher(numero).matches()) {
+                Toast.makeText(this, "Número inválido!", Toast.LENGTH_SHORT).show();
+                return;
+            }
 
             verificarCidade(cep, ibgeCidade -> {
                 Cliente cliente = new Cliente();
