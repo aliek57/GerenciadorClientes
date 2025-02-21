@@ -1,6 +1,6 @@
 # Gerenciador de Clientes - Representante Comercial
 
-Este aplicativo foi desenvolvido para gerenciar os clientes de um representante comercial, permitindo o cadastro, o gerenciamento de visitas e a realização de pedidos. A aplicação utiliza a API **Room** do Android para armazenar os dados localmente e oferece funcionalidades como a seleção de cidades, registro de visitas e visualização das informações dos clientes.
+Esse aplicativo foi desenvolvido para gerenciar os clientes de um representante comercial, permitindo o cadastro, o gerenciamento de visitas e a realização de pedidos. A aplicação utiliza a API **Room** do Android para armazenar os dados localmente e oferece funcionalidades como a seleção de cidades, registro de visitas e visualização das informações dos clientes.
 
 ## Funcionalidades
 
