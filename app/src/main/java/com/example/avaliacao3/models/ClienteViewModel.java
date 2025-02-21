@@ -1,9 +1,13 @@
-package com.example.avaliacao3;
+package com.example.avaliacao3.models;
 
 import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
+
+import com.example.avaliacao3.classes.Cliente;
+import com.example.avaliacao3.classes.Database;
+import com.example.avaliacao3.interfaces.ClienteDAO;
 
 public class ClienteViewModel extends AndroidViewModel {
     private ClienteDAO clienteDAO;

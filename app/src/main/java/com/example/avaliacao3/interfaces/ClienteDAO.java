@@ -1,10 +1,11 @@
-package com.example.avaliacao3;
+package com.example.avaliacao3.interfaces;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
-import androidx.room.Update;
+
+import com.example.avaliacao3.classes.Cliente;
 
 import java.util.List;
 

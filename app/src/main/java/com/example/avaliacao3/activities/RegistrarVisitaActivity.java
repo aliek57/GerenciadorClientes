@@ -1,8 +1,7 @@
-package com.example.avaliacao3;
+package com.example.avaliacao3.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
@@ -10,6 +9,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
+
+import com.example.avaliacao3.R;
+import com.example.avaliacao3.classes.Visita;
+import com.example.avaliacao3.models.VisitaViewModel;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

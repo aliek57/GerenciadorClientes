@@ -1,4 +1,4 @@
-package com.example.avaliacao3;
+package com.example.avaliacao3.classes;
 
 import android.util.Log;
 

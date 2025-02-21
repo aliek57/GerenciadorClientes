@@ -1,4 +1,6 @@
-package com.example.avaliacao3;
+package com.example.avaliacao3.interfaces;
+
+import com.example.avaliacao3.classes.CepResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

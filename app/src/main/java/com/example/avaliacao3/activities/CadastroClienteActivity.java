@@ -1,9 +1,8 @@
-package com.example.avaliacao3;
+package com.example.avaliacao3.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Looper;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,6 +10,17 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
+
+import com.example.avaliacao3.classes.CepResponse;
+import com.example.avaliacao3.classes.Cidade;
+import com.example.avaliacao3.classes.Cliente;
+import com.example.avaliacao3.classes.Database;
+import com.example.avaliacao3.R;
+import com.example.avaliacao3.classes.RetrofitInstance;
+import com.example.avaliacao3.interfaces.CidadeDAO;
+import com.example.avaliacao3.interfaces.OnIbgeReceivedListener;
+import com.example.avaliacao3.interfaces.ViaCepService;
+import com.example.avaliacao3.models.ClienteViewModel;
 
 import retrofit2.Call;
 import retrofit2.Callback;

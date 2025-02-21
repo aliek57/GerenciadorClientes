@@ -1,4 +1,4 @@
-package com.example.avaliacao3;
+package com.example.avaliacao3.classes;
 
 public class CepResponse {
     private String logradouro;

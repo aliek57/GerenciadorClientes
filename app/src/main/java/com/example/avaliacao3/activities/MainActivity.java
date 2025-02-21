@@ -1,15 +1,8 @@
-package com.example.avaliacao3;
+package com.example.avaliacao3.activities;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.Network;
-import android.net.NetworkCapabilities;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -21,19 +14,17 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.lifecycle.Observer;
-import androidx.room.Room;
 
-import java.io.IOException;
+import com.example.avaliacao3.classes.Cidade;
+import com.example.avaliacao3.classes.Cliente;
+import com.example.avaliacao3.classes.Database;
+import com.example.avaliacao3.R;
+import com.example.avaliacao3.interfaces.CidadeDAO;
+import com.example.avaliacao3.interfaces.ClienteDAO;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     private Database db;
