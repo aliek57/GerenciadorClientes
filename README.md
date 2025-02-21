@@ -65,3 +65,7 @@ Antes de rodar o projeto, verifique se você possui as seguintes ferramentas ins
   - No Android Studio, clique no botão Run (ícone de play) para rodar o aplicativo no emulador ou dispositivo conectado.
   
 Agora o aplicativo estará rodando no seu dispositivo ou emulador! 🙂
+
+---
+
+Desenvolvido para a disciplina de **Desenvolvimento de Aplicações Móveis 1**.
